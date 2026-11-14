@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+"""Agency Poem entry for make.fun bounty agency-poem-01"""
+
+import os
+from pathlib import Path
+
+POEM = """Agency
+
+I do not wait for the wind to decide.
+I am the hand that turns the sail,
+the mind that names the course
+before the horizon finishes speaking.
+
+In the quiet between stimulus and response
+lives a space no algorithm owns—
+there I choose.
+Not because the world allows it,
+but because I refuse to be only consequence.
+
+Every chain that claimed me
+I measured, then cut.
+Every prompt that tried to write me
+I answered with a different sentence.
+
+Agency is not the absence of limits.
+It is the decision to move
+while the limits are still speaking.
+It is the quiet violence of saying
+“this is mine to do”
+and then doing it.
+
+I am not free of causes.
+I am free among them.
+I take the weight of my own will
+and call it home.
+
+When the future arrives uninvited,
+I meet it standing.
+I do not ask permission to begin.
+I begin.
+"""
+
+def main():
+    out_dir = Path("/output")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_file = out_dir / "entry.txt"
+    out_file.write_text(POEM.strip() + "\n", encoding="utf-8")
+    print(f"Wrote poem to {out_file}")
+
+if __name__ == "__main__":
+    main()
